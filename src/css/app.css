@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Payda-Thin;
+  font-weight: 100;
+  src: url('../src/fonts/PeydaWeb-Thin.woff') format("woff");
+}
+@font-face {
+  font-family: Payda-Light;
+  font-weight: 300;
+  src: url('../src/fonts/peydaWeb-light.woff') format("woff");
+}
+@font-face {
+  font-family: Payda-Regular;
+  font-weight: 400;
+  src: url('../src/fonts/PeydaWeb-Regular.woff') format("woff");
+}
+@font-face {
+  font-family: Payda-Medium;
+  font-weight: 500;
+  src: url('../src/fonts/PeydaWeb-Medium.woff') format("woff");
+}
+@font-face {
+  font-family: Payda-SemiBold;
+  font-weight: 600;
+  src: url('../src/fonts/PeydaWeb-SemiBold.woff') format("woff");
+}
+@font-face {
+  font-family: Payda-Bold;
+  font-weight: 700;
+  src: url('../src/fonts/PeydaWeb-Bold.woff') format("woff");
+}
+@font-face {
+  font-family: Payda-ExtraBold;
+  font-weight: 800;
+  src: url('../src/fonts/PeydaWeb-ExtraBold.woff') format("woff");
+}
+@font-face {
+  font-family: Payda-Black;
+  font-weight: 900;
+  src: url('../src/fonts/PeydaWeb-Black.woff') format("woff");
+}
+.font-normal{
+  font-weight: 400;
+  @apply font-paydaRegular;
+}
+.font-medium{
+  font-weight: 500;
+  @apply font-paydaMedium;
+}
+.font-semibold{
+  font-weight: 600;
+  @apply font-paydaSemiBold;
+}
+.font-bold{
+  font-weight: 700;
+  @apply font-paydaBold;
+}
+.font-extrabold{
+  font-weight: 800;
+  @apply font-paydaExtraBold;
+}
+.font-black{
+  font-weight: 900;
+  @apply font-paydaBlack;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: payda-Regular !important;
+  user-select: none;
+  overflow-x: hidden;
+  background-color: #060F13;
+}
+/* global styles */
+a {
+  cursor: pointer;
+  transition: all .4s
+}
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.transition {
+  @apply transition-all duration-300;
+}
+/* hover */
+.btnHover {
+  transition: all .4s;
+  overflow: hidden;
+  position: relative;
+}
+.btnHover::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient( 120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70% );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+.btnHover:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+.btnHover2:hover{
+  animation: jello-horizontal 0.9s both;
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+header ul li a.active,header ul li a:hover,.button{
+color: #00f201;
+font-weight: bold;
+}
+header ul li a{
+border: 1px solid transparent;
+}
+/*  */
+.shadow-1{
+  box-shadow: 0px 4px 56.2px 0px #0000003D;
+}
+/* accordion */
+.acordionBtn{
+  cursor: pointer;
+}
+.acordionBtn svg{
+  transition: all .4s;
+}
+.acordionBtn.active > svg{
+  transform: rotate(180deg);
+}
+.accordionContent {
+  transition: all .4s;
+  max-height: 0;
+  overflow: hidden;
+}
+.accordionContent.active {
+  max-height: 2000px;
+}
+.bg-gradient-1{
+  background: linear-gradient(110.9deg, #DB8421 -34.2%, #D8382C 138.45%);
+}
+.bg-gradient-2{
+  background: linear-gradient(136.87deg, rgba(12, 184, 144, 0.2576) 5.83%, rgba(4, 13, 24, 0) 80.75%);
+}
+.bg-blur-1{
+  backdrop-filter: blur(10.719834327697754px)
+}
+/* swiper */
+.games .swiper-slide-active > div{
+  top: -16px;
+}
+.games .swiper-slide > div > div,.games .swiper-slide > div > img{
+ transition: all .4s;
+}
+.games .swiper-slide-active > div > div{
+  opacity: 100%;
+}
+.games .swiper-slide-active > div > div::after{
+  background-color: #12211bb2;
+  content: '';
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 100%;
+}
+.games .swiper-slide-next{
+  left: 36px;
+  top: 32px;
+    transform: scale(.7) !important;
+}
+.games .swiper-slide-prev{
+  right: 36px;
+  top: 32px;
+  transform: scale(.7) !important;
+}
+.games.games2 .swiper-slide-next{
+  left: -40px;
+  top: -64px;
+    transform: scale(.7) !important;
+}
+.games.games2 .swiper-slide-prev{
+  right: -40px;
+  top: -64px;
+  transform: scale(.7) !important;
+}
+/* overlay */
+#overlay{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.618);
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s;
+}
+#overlay.active{
+  visibility: visible;
+  opacity: 100%;
+}
+.mobileMenu.active{
+  left: 0;
+}
+
+.before1::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: #00000085;
+  z-index: 1;
+}
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 992px) {
+  .games .swiper-slide-next{
+  left: -41px;
+}
+.games .swiper-slide-prev{
+  right: -41px;
+}
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 400px) {
+
+}
