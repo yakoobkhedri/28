@@ -641,8 +641,8 @@ video {
   left: -4rem;
 }
 
-.-right-72 {
-  right: -18rem;
+.-left-72 {
+  left: -18rem;
 }
 
 .-top-14 {
@@ -1557,7 +1557,7 @@ header ul li a{
 }
 
 .mobileMenu.active{
-  right: 0;
+  left: 0;
 }
 
 .before1::before{
