@@ -641,8 +641,8 @@ video {
   left: -4rem;
 }
 
-.-left-72 {
-  left: -18rem;
+.-right-72 {
+  right: -18rem;
 }
 
 .-top-14 {
@@ -673,14 +673,6 @@ video {
   left: 0px;
 }
 
-.left-\[140px\] {
-  left: 140px;
-}
-
-.left-\[272px\] {
-  left: 272px;
-}
-
 .right-0 {
   right: 0px;
 }
@@ -689,20 +681,8 @@ video {
   right: 0.5rem;
 }
 
-.right-\[140px\] {
-  right: 140px;
-}
-
-.right-\[272px\] {
-  right: 272px;
-}
-
 .top-0 {
   top: 0px;
-}
-
-.top-1 {
-  top: 0.25rem;
 }
 
 .top-16 {
@@ -929,10 +909,6 @@ video {
   width: 451px;
 }
 
-.w-\[471px\] {
-  width: 471px;
-}
-
 .w-\[500px\] {
   width: 500px;
 }
@@ -950,7 +926,7 @@ video {
 }
 
 .max-w-content {
-  max-width: 1236px;
+  max-width: 1336px;
 }
 
 .flex-shrink-0 {
@@ -1581,7 +1557,7 @@ header ul li a{
 }
 
 .mobileMenu.active{
-  left: 0;
+  right: 0;
 }
 
 .before1::before{
@@ -1647,6 +1623,10 @@ header ul li a{
 @media (min-width: 640px) {
   .sm\:mt-\[133px\] {
     margin-top: 133px;
+  }
+
+  .sm\:block {
+    display: block;
   }
 
   .sm\:hidden {
@@ -1804,10 +1784,6 @@ header ul li a{
 @media (min-width: 1280px) {
   .xl\:mt-\[72px\] {
     margin-top: 72px;
-  }
-
-  .xl\:block {
-    display: block;
   }
 
   .xl\:h-\[136px\] {

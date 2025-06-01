@@ -23,7 +23,7 @@ module.exports = {
         paydaBlack: "Payda-Black",
       },
       maxWidth:{
-        'content':'1236px',
+        'content':'1336px',
       },
     }
 },

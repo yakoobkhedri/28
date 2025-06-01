@@ -249,7 +249,7 @@ border: 1px solid transparent;
   opacity: 100%;
 }
 .mobileMenu.active{
-  left: 0;
+  right: 0;
 }
 
 .before1::before{
